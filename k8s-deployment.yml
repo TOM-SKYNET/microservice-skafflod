@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+   name: spring-boot-microservice
+spec:
+    replicas: 1
+    selector: 
+       matchLabels: 
+          app: spring-boot-microservice
+    template:
+       metadata:
+          labels:
+             app: spring-boot-microservice
+       spec:
+          containers:
+             - name: spring-boot-microservice
+               image: skaffold-springboot-microservice
+               ports:
+                  - containerPort: 8081
+                
