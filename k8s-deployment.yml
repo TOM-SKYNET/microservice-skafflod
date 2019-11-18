@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
    name: spring-boot-microservice
 spec:
-    replicas: 1
+    replicas: 2
     selector: 
        matchLabels: 
           app: spring-boot-microservice
